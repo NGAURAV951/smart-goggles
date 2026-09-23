@@ -69,11 +69,11 @@ A wearable ESP32-based smart goggles prototype combining GPS location tracking, 
 
 ## What I learned
 
-- [Add 1-2 real points, e.g. reading multiple sensors and a fingerprint module on shared serial/I2C buses, structuring authentication-gated logic on a microcontroller.]
+I hadn't worked with multiple hardware serial ports on one board before, so getting the GPS module and fingerprint sensor to run at the same time without interfering with each other took some trial and error. I also had to think through how to structure the code so the device stays locked and does nothing else until the fingerprint check passes, which was a good exercise in writing authentication logic rather than just reading sensors.
 
 ## Possible improvements
 
-- [Only list ideas you'd actually want to build, e.g. GSM fallback if WiFi is unavailable, low-power sleep mode.]
+Right now the goggles only support one enrolled fingerprint. A next step would be storing multiple users, and adding a low-power sleep mode so the battery lasts longer when the device is idle.
 
 ## Author
 
